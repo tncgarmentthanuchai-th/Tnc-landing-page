@@ -372,6 +372,62 @@ h1, h2, h3, h4 { color: var(--primary); line-height: 1.4; }
   padding: 14px 10px;
 }
 
+/* ---------- Fabrics / เนื้อผ้า ---------- */
+.section-sub {
+  text-align: center;
+  font-size: 16px;
+  margin: -36px 0 44px;
+}
+.fabric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.fabric-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease;
+}
+.fabric-card:hover { transform: translateY(-6px); }
+.ph-fabric { aspect-ratio: 3 / 2; }
+.fabric-body {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.fabric-body h3 { font-size: 18px; font-weight: 600; color: var(--primary); }
+.fabric-body p { font-size: 14px; }
+.fabric-meter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+}
+.fabric-meter span { width: 92px; flex-shrink: 0; }
+.fabric-meter i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue-tint);
+}
+.fabric-meter i.on { background: var(--secondary); }
+.fabric-tag {
+  margin-top: auto;
+  align-self: flex-start;
+  background: var(--blue-tint);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
 /* ---------- Reviews ---------- */
 .review-grid {
   display: grid;
@@ -605,6 +661,7 @@ h1, h2, h3, h4 { color: var(--primary); line-height: 1.4; }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .features-grid { grid-template-columns: repeat(3, 1fr); }
   .cat-grid { grid-template-columns: repeat(3, 1fr); }
+  .fabric-grid { grid-template-columns: repeat(2, 1fr); }
   .review-grid { grid-template-columns: repeat(2, 1fr); }
   .steps-grid { grid-template-columns: repeat(2, 1fr); row-gap: 44px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -620,6 +677,8 @@ h1, h2, h3, h4 { color: var(--primary); line-height: 1.4; }
   .feature-card { padding: 20px 12px; }
   .cards-3 { grid-template-columns: 1fr; }
   .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .fabric-grid { grid-template-columns: 1fr; }
+  .section-sub { margin: -22px 0 32px; }
   .review-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: 1fr; row-gap: 40px; }
   .tools-grid { grid-template-columns: 1fr; }
