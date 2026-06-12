@@ -84,32 +84,58 @@ document.querySelectorAll('.acc-item').forEach((item) => {
   });
 });
 
-/* ---------- เครื่องคำนวณราคาโดยประมาณ ----------
-   TODO: ปรับตารางราคาให้ตรงกับราคาจริงของ TNC */
-const PRICE_TABLE = {
-  print: { name: 'เสื้อพิมพ์ลาย (Sublimation)', tiers: [[20, 350], [50, 320], [100, 290], [300, 260], [Infinity, 240]] },
-  polo:  { name: 'เสื้อโปโลปัก',               tiers: [[20, 300], [50, 280], [100, 255], [300, 230], [Infinity, 210]] },
-  ready: { name: 'เสื้อสำเร็จรูป + สกรีน',      tiers: [[10, 220], [50, 195], [100, 175], [300, 155], [Infinity, 140]] },
+/* ---------- เครื่องคำนวณราคาโดยประมาณ ---------- */
+const SHIRT_TYPES = {
+  crew:   { name: 'เสื้อคอกลม',      price: 229, img: 'images/tools/crew.jpg' },
+  vneck:  { name: 'เสื้อคอวี',       price: 229, img: 'images/tools/v-neck.jpg' },
+  polo:   { name: 'เสื้อคอปก',       price: 289, img: 'images/tools/polo.jpg' },
+  jersey: { name: 'คอปก Jersey',     price: 289, img: 'images/tools/jersey.jpg' },
 };
+const MIN_QTY = 10;
+
+const priceTypeSelect = document.getElementById('priceType');
+const shirtPreview = document.getElementById('shirtPreview');
+const shirtPreviewPh = document.getElementById('shirtPreviewPh');
+const shirtPreviewPhText = document.getElementById('shirtPreviewPhText');
+
+shirtPreview.addEventListener('load', () => {
+  shirtPreview.style.display = 'block';
+  shirtPreviewPh.style.display = 'none';
+});
+shirtPreview.addEventListener('error', () => {
+  shirtPreview.style.display = 'none';
+  shirtPreviewPh.style.display = 'flex';
+  shirtPreviewPhText.textContent = 'วาง ' + SHIRT_TYPES[priceTypeSelect.value].img + ' — 600×800';
+});
+
+// กรณีรูปแรกโหลดไม่สำเร็จก่อน listener ถูกผูก (script อยู่ท้าย body)
+if (shirtPreview.complete && shirtPreview.naturalWidth === 0) {
+  shirtPreview.dispatchEvent(new Event('error'));
+}
+
+function updateShirtPreview() {
+  const type = SHIRT_TYPES[priceTypeSelect.value];
+  shirtPreview.alt = type.name;
+  shirtPreview.src = type.img;
+}
+priceTypeSelect.addEventListener('change', updateShirtPreview);
 
 document.getElementById('priceForm').addEventListener('submit', (e) => {
   e.preventDefault();
-  const type = PRICE_TABLE[document.getElementById('priceType').value];
+  const type = SHIRT_TYPES[priceTypeSelect.value];
   const qty = parseInt(document.getElementById('priceQty').value, 10);
   const result = document.getElementById('priceResult');
 
-  const minQty = type.tiers[0][0];
-  if (qty < minQty) {
+  if (qty < MIN_QTY) {
     result.hidden = false;
-    result.innerHTML = type.name + ' สั่งขั้นต่ำ ' + minQty + ' ตัว กรุณาเพิ่มจำนวน';
+    result.innerHTML = 'สั่งขั้นต่ำ ' + MIN_QTY + ' ตัว กรุณาเพิ่มจำนวน';
     return;
   }
-  const perUnit = type.tiers.find(([max]) => qty <= max)[1];
-  const total = perUnit * qty;
+  const total = type.price * qty;
   result.hidden = false;
   result.innerHTML =
     type.name + ' จำนวน ' + qty.toLocaleString() + ' ตัว<br>' +
-    'ราคาประมาณ <strong>' + perUnit.toLocaleString() + '</strong> บาท/ตัว ' +
+    'ราคา <strong>' + type.price.toLocaleString() + '</strong> บาท/ตัว ' +
     'รวมประมาณ <strong>' + total.toLocaleString() + '</strong> บาท (รวม VAT)';
 });
 

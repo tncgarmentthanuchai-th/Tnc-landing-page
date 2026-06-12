@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Prata&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 
@@ -371,19 +371,27 @@
 
       <div class="tool-card reveal">
         <h3>คำนวณราคาโดยประมาณ</h3>
-        <form id="priceForm">
-          <label>ประเภทเสื้อ
-            <select id="priceType">
-              <option value="print">เสื้อพิมพ์ลาย (Sublimation)</option>
-              <option value="polo">เสื้อโปโลปัก</option>
-              <option value="ready">เสื้อสำเร็จรูป + สกรีน</option>
-            </select>
-          </label>
-          <label>จำนวน (ตัว)
-            <input type="number" id="priceQty" min="1" value="50" required>
-          </label>
-          <button type="submit" class="btn">คำนวณ</button>
-        </form>
+        <div class="tool-flex">
+          <!-- โฟลเดอร์ images/tools/ — รูปเสื้อแนวตั้ง 600×800: crew.jpg, v-neck.jpg, polo.jpg, jersey.jpg -->
+          <div class="tool-preview">
+            <img src="images/tools/crew.jpg" alt="เสื้อคอกลม" class="card-img ph-shirt" id="shirtPreview">
+            <div class="img-placeholder ph-shirt" id="shirtPreviewPh" style="display:none"><span id="shirtPreviewPhText">วาง images/tools/crew.jpg — 600×800</span></div>
+          </div>
+          <form id="priceForm">
+            <label>ประเภทคอเสื้อ
+              <select id="priceType">
+                <option value="crew">เสื้อคอกลม — 229.-/ตัว</option>
+                <option value="vneck">เสื้อคอวี — 229.-/ตัว</option>
+                <option value="polo">เสื้อคอปก — 289.-/ตัว</option>
+                <option value="jersey">คอปก Jersey — 289.-/ตัว</option>
+              </select>
+            </label>
+            <label>จำนวน (ตัว)
+              <input type="number" id="priceQty" min="1" value="50" required>
+            </label>
+            <button type="submit" class="btn">คำนวณ</button>
+          </form>
+        </div>
         <div class="tool-result" id="priceResult" hidden></div>
         <p class="tool-note">* ราคาประมาณการเบื้องต้น สอบถามราคาจริงกับแอดมิน</p>
       </div>
