@@ -515,7 +515,7 @@ h1, h2, h3, h4 { color: var(--primary); line-height: 1.4; }
 .tool-flex { display: flex; gap: 20px; align-items: flex-start; }
 .tool-flex form { flex: 1; }
 .tool-preview {
-  width: 150px;
+  width: 210px;
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
@@ -692,7 +692,7 @@ h1, h2, h3, h4 { color: var(--primary); line-height: 1.4; }
   .review-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: 1fr; row-gap: 40px; }
   .tools-grid { grid-template-columns: 1fr; }
-  .tool-preview { width: 120px; }
+  .tool-preview { width: 150px; }
   .footer-grid { grid-template-columns: 1fr; padding: 48px 20px 32px; }
   .footer-bottom-inner { justify-content: center; text-align: center; }
 }
