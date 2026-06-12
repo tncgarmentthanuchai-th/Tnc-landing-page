@@ -329,7 +329,7 @@ h1, h2, h3, h4 { color: var(--primary); line-height: 1.4; }
   gap: 28px;
 }
 .service-card, .blog-card {
-  background: var(--bg);
+  background: var(--white);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -337,7 +337,6 @@ h1, h2, h3, h4 { color: var(--primary); line-height: 1.4; }
   flex-direction: column;
   transition: transform .25s ease;
 }
-.section-alt .service-card { background: var(--bg); }
 .blog-card { background: var(--white); }
 .service-card:hover, .blog-card:hover { transform: translateY(-6px); }
 .ph-card, .ph-review { aspect-ratio: 4 / 3; }
@@ -350,27 +349,58 @@ h1, h2, h3, h4 { color: var(--primary); line-height: 1.4; }
 .read-more { color: var(--secondary); font-weight: 600; font-size: 14px; }
 .read-more:hover { color: var(--primary); }
 
-/* ---------- Categories ---------- */
-.cat-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-}
-.cat-card {
+/* ---------- New Arrived slider ---------- */
+.na-slider {
+  position: relative;
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--white);
   box-shadow: var(--shadow);
-  transition: transform .25s ease;
 }
-.cat-card:hover { transform: translateY(-6px); }
-.ph-cat { aspect-ratio: 5 / 6.2; }
-.cat-card h3 {
-  font-size: 15px;
-  font-weight: 600;
-  text-align: center;
-  padding: 14px 10px;
+.na-track {
+  display: flex;
+  transition: transform .6s ease;
 }
+.na-slide { flex: 0 0 100%; }
+.ph-na { aspect-ratio: 3 / 2; }
+.na-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .85);
+  color: var(--primary);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s ease;
+}
+.na-arrow:hover { background: var(--white); }
+.na-arrow.prev { left: 14px; }
+.na-arrow.next { right: 14px; }
+.na-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.na-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, .55);
+  cursor: pointer;
+  padding: 0;
+}
+.na-dots button.is-active { background: var(--white); }
 
 /* ---------- Fabrics / เนื้อผ้า ---------- */
 .section-sub {
@@ -670,7 +700,6 @@ h1, h2, h3, h4 { color: var(--primary); line-height: 1.4; }
 
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .features-grid { grid-template-columns: repeat(3, 1fr); }
-  .cat-grid { grid-template-columns: repeat(3, 1fr); }
   .fabric-grid { grid-template-columns: repeat(2, 1fr); }
   .review-grid { grid-template-columns: repeat(2, 1fr); }
   .steps-grid { grid-template-columns: repeat(2, 1fr); row-gap: 44px; }
@@ -686,8 +715,8 @@ h1, h2, h3, h4 { color: var(--primary); line-height: 1.4; }
   .features-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .feature-card { padding: 20px 12px; }
   .cards-3 { grid-template-columns: 1fr; }
-  .cat-grid { grid-template-columns: repeat(2, 1fr); }
   .fabric-grid { grid-template-columns: 1fr; }
+  .na-arrow { width: 36px; height: 36px; font-size: 20px; }
   .section-sub { margin: -22px 0 32px; }
   .review-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: 1fr; row-gap: 40px; }

@@ -48,6 +48,33 @@ function next() { goTo((current + 1) % slides.length); }
 function restart() { clearInterval(timer); timer = setInterval(next, 4500); }
 restart();
 
+/* ---------- New Arrived slider (เลื่อนแบบ slide) ---------- */
+const naTrack = document.getElementById('naTrack');
+const naSlides = naTrack.children;
+const naDotsWrap = document.getElementById('naDots');
+let naIndex = 0;
+let naTimer;
+
+for (let i = 0; i < naSlides.length; i++) {
+  const dot = document.createElement('button');
+  dot.setAttribute('aria-label', 'แบบเสื้อที่ ' + (i + 1));
+  if (i === 0) dot.classList.add('is-active');
+  dot.addEventListener('click', () => { naGoTo(i); naRestart(); });
+  naDotsWrap.appendChild(dot);
+}
+const naDots = naDotsWrap.querySelectorAll('button');
+
+function naGoTo(i) {
+  naIndex = (i + naSlides.length) % naSlides.length;
+  naTrack.style.transform = 'translateX(-' + (naIndex * 100) + '%)';
+  naDots.forEach((d, j) => d.classList.toggle('is-active', j === naIndex));
+}
+function naRestart() { clearInterval(naTimer); naTimer = setInterval(() => naGoTo(naIndex + 1), 4500); }
+
+document.getElementById('naPrev').addEventListener('click', () => { naGoTo(naIndex - 1); naRestart(); });
+document.getElementById('naNext').addEventListener('click', () => { naGoTo(naIndex + 1); naRestart(); });
+naRestart();
+
 /* ---------- Marquee: ทำสำเนาโลโก้เพื่อให้วนลูปไร้รอยต่อ ---------- */
 const track = document.getElementById('marqueeTrack');
 track.innerHTML += track.innerHTML;

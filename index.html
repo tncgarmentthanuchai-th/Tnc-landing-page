@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Prata&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 
@@ -27,11 +27,11 @@
         <li><a href="#top" class="active">หน้าแรก</a></li>
         <li><a href="#services">บริการของเรา</a></li>
         <li class="has-sub">
-          <a href="#categories">ผลงานแบบเสื้อ <span class="caret">▾</span></a>
+          <a href="#new-arrived">ผลงานแบบเสื้อ <span class="caret">▾</span></a>
           <ul class="sub-menu">
-            <li><a href="#categories">เสื้อพิมพ์ลาย</a></li>
-            <li><a href="#categories">เสื้อโปโลปัก</a></li>
-            <li><a href="#categories">เสื้อสำเร็จรูปขายปลีก</a></li>
+            <li><a href="#new-arrived">แบบเสื้อมาใหม่</a></li>
+            <li><a href="#services">เสื้อพิมพ์ลาย</a></li>
+            <li><a href="#services">เสื้อคอปกชนิดต่างๆ</a></li>
           </ul>
         </li>
         <li><a href="#reviews">รีวิวจากลูกค้า</a></li>
@@ -138,8 +138,43 @@
   </div>
 </section>
 
+<!-- ===== New Arrived / แบบเสื้อมาใหม่ ===== -->
+<section class="new-arrived section section-alt" id="new-arrived">
+  <div class="container">
+    <h2 class="section-title reveal"><span class="accent-en">NEW ARRIVED</span></h2>
+    <div class="na-slider reveal">
+      <div class="na-track" id="naTrack">
+        <!-- โฟลเดอร์ images/new-arrived/ — new-1.jpg ถึง new-5.jpg ขนาดแนะนำ 1536×1024 -->
+        <div class="na-slide">
+          <img src="images/new-arrived/new-1.jpg" alt="แบบเสื้อมาใหม่ 1" class="card-img ph-na" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-placeholder ph-na" style="display:none"><span>วาง images/new-arrived/new-1.jpg — 1536×1024</span></div>
+        </div>
+        <div class="na-slide">
+          <img src="images/new-arrived/new-2.jpg" alt="แบบเสื้อมาใหม่ 2" class="card-img ph-na" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-placeholder ph-na alt1" style="display:none"><span>วาง images/new-arrived/new-2.jpg — 1536×1024</span></div>
+        </div>
+        <div class="na-slide">
+          <img src="images/new-arrived/new-3.jpg" alt="แบบเสื้อมาใหม่ 3" class="card-img ph-na" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-placeholder ph-na alt2" style="display:none"><span>วาง images/new-arrived/new-3.jpg — 1536×1024</span></div>
+        </div>
+        <div class="na-slide">
+          <img src="images/new-arrived/new-4.jpg" alt="แบบเสื้อมาใหม่ 4" class="card-img ph-na" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-placeholder ph-na alt1" style="display:none"><span>วาง images/new-arrived/new-4.jpg — 1536×1024</span></div>
+        </div>
+        <div class="na-slide">
+          <img src="images/new-arrived/new-5.jpg" alt="แบบเสื้อมาใหม่ 5" class="card-img ph-na" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-placeholder ph-na alt2" style="display:none"><span>วาง images/new-arrived/new-5.jpg — 1536×1024</span></div>
+        </div>
+      </div>
+      <button class="na-arrow prev" id="naPrev" aria-label="สไลด์ก่อนหน้า">‹</button>
+      <button class="na-arrow next" id="naNext" aria-label="สไลด์ถัดไป">›</button>
+      <div class="na-dots" id="naDots"></div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== Services / บริการหลัก ===== -->
-<section class="services section section-alt" id="services">
+<section class="services section" id="services">
   <div class="container">
     <h2 class="section-title reveal">บริการหลัก</h2>
     <div class="cards-3">
@@ -150,7 +185,7 @@
         <div class="card-body">
           <h3>รับผลิตเสื้อพิมพ์ลาย</h3>
           <p>เสื้อพิมพ์ลายเต็มตัวด้วยระบบ Sublimation สีสด ไม่ลอก ไม่ซีด ออกแบบลายได้อิสระตามต้องการ</p>
-          <a href="#categories" class="btn btn-outline">ดูเพิ่มเติม</a>
+          <a href="#new-arrived" class="btn btn-outline">ดูเพิ่มเติม</a>
         </div>
       </article>
       <article class="service-card reveal">
@@ -159,7 +194,7 @@
         <div class="card-body">
           <h3>เสื้อคอปกชนิดต่างๆ</h3>
           <p>เสื้อคอปกผ้าเกรดพรีเมี่ยม ทั้งคอปกธรรมดาและคอปก Jersey เหมาะสำหรับยูนิฟอร์มบริษัทและหน่วยงาน</p>
-          <a href="#categories" class="btn btn-outline">ดูเพิ่มเติม</a>
+          <a href="#new-arrived" class="btn btn-outline">ดูเพิ่มเติม</a>
         </div>
       </article>
       <article class="service-card reveal">
@@ -168,44 +203,9 @@
         <div class="card-body">
           <h3>เนื้อผ้าตัวอย่าง/เสื้อตัวอย่างฟรี</h3>
           <p>ส่งตัวอย่างผ้าและเสื้อตัวอย่างให้ดูฟรีก่อนตัดสินใจ มั่นใจในคุณภาพก่อนสั่งผลิตจริง</p>
-          <a href="#categories" class="btn btn-outline">ดูเพิ่มเติม</a>
+          <a href="#new-arrived" class="btn btn-outline">ดูเพิ่มเติม</a>
         </div>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Categories / หมวดการใช้งาน ===== -->
-<section class="categories section" id="categories">
-  <div class="container">
-    <h2 class="section-title reveal">“ครบทุกแบบเสื้อ เหมาะกับทุกการใช้งาน”</h2>
-    <div class="cat-grid">
-      <!-- โฟลเดอร์ images/categories/ — ขนาดแนะนำ 500×620 (แนวตั้ง) -->
-      <a href="#footer" class="cat-card reveal">
-        <img src="images/categories/government.jpg" alt="เสื้อหน่วยงาน/รัฐวิสาหกิจ" class="card-img ph-cat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="img-placeholder ph-cat" style="display:none"><span>วาง images/categories/government.jpg — 500×620</span></div>
-        <h3>เสื้อหน่วยงาน/รัฐวิสาหกิจ</h3>
-      </a>
-      <a href="#footer" class="cat-card reveal">
-        <img src="images/categories/shop.jpg" alt="เสื้อร้านค้า/บริษัท" class="card-img ph-cat alt1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="img-placeholder ph-cat alt1" style="display:none"><span>วาง images/categories/shop.jpg — 500×620</span></div>
-        <h3>เสื้อร้านค้า/บริษัท</h3>
-      </a>
-      <a href="#footer" class="cat-card reveal">
-        <img src="images/categories/event.jpg" alt="เสื้อกิจกรรม/เสื้อทีม" class="card-img ph-cat alt2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="img-placeholder ph-cat alt2" style="display:none"><span>วาง images/categories/event.jpg — 500×620</span></div>
-        <h3>เสื้อกิจกรรม/เสื้อทีม</h3>
-      </a>
-      <a href="#footer" class="cat-card reveal">
-        <img src="images/categories/school.jpg" alt="เสื้อโรงเรียน/กีฬาสี" class="card-img ph-cat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="img-placeholder ph-cat" style="display:none"><span>วาง images/categories/school.jpg — 500×620</span></div>
-        <h3>เสื้อโรงเรียน/กีฬาสี</h3>
-      </a>
-      <a href="#footer" class="cat-card reveal">
-        <img src="images/categories/sport.jpg" alt="เสื้อกีฬา" class="card-img ph-cat alt1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="img-placeholder ph-cat alt1" style="display:none"><span>วาง images/categories/sport.jpg — 500×620</span></div>
-        <h3>เสื้อกีฬา</h3>
-      </a>
     </div>
   </div>
 </section>
