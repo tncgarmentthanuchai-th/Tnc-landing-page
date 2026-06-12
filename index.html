@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TNC Garment – รับผลิตเสื้อพิมพ์ลายและโปโลปัก สำหรับองค์กร หน่วยงาน และทีมกิจกรรม</title>
+<meta name="description" content="TNC Garment รับผลิตเสื้อพิมพ์ลายเกรดพรีเมี่ยม เสื้อโปโลปัก เสื้อหน่วยงาน เสื้อองค์กร เสื้อกิจกรรม ออกแบบฟรี ส่งฟรีทั่วประเทศ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <!-- บันทึกไฟล์โลโก้เป็น images/logo.png แล้วจะแสดงอัตโนมัติ (ถ้าไม่มีไฟล์จะแสดงข้อความแทน) -->
+      <img src="images/logo.png" alt="TNC Thanuchaicharoen" class="logo-img"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <span class="logo-fallback" style="display:none"><span class="logo-mark">TNC</span><span class="logo-text">Thanuchaicharoen</span></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#top" class="active">หน้าแรก</a></li>
+        <li><a href="#services">บริการของเรา</a></li>
+        <li class="has-sub">
+          <a href="#categories">ผลงานแบบเสื้อ <span class="caret">▾</span></a>
+          <ul class="sub-menu">
+            <li><a href="#categories">เสื้อพิมพ์ลาย</a></li>
+            <li><a href="#categories">เสื้อโปโลปัก</a></li>
+            <li><a href="#categories">เสื้อสำเร็จรูปขายปลีก</a></li>
+          </ul>
+        </li>
+        <li><a href="#reviews">รีวิวจากลูกค้า</a></li>
+        <li><a href="#faq">คำถามที่พบบ่อย</a></li>
+        <li><a href="#blog">บทความ</a></li>
+        <li><a href="#footer">เกี่ยวกับเรา</a></li>
+        <li><a href="#footer">ติดต่อเรา</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-contacts">
+      <a href="tel:0844003704" class="contact-chip chip-call" aria-label="โทร 084-400-3704">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span>Call</span>
+      </a>
+      <a href="https://line.me/R/ti/p/@tnc.th" target="_blank" rel="noopener" class="contact-chip chip-line" aria-label="Line">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11.1c0 4 3.5 7.3 8.3 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.6 8.2-6.1 1.5-1.7 2.2-3.4 2.2-5C22 6.6 17.5 3 12 3z"/></svg>
+        <span>Line</span>
+      </a>
+      <a href="https://m.me/112983417277912" target="_blank" rel="noopener" class="contact-chip chip-msg" aria-label="Messenger">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4-2.5-2.7-5 2.7 5.5-5.8 2.6 2.7 4.9-2.7-5.5 5.8z"/></svg>
+        <span>Messenger</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="เปิดเมนู" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero Slider ===== -->
+<section class="hero">
+  <h1 class="sr-only">TNC Garment รับผลิตเสื้อพิมพ์ลายทุกชนิด เสื้อหน่วยงาน เสื้อองค์กร เสื้อกิจกรรม</h1>
+  <div class="hero-slider" id="heroSlider">
+    <!-- โฟลเดอร์ images/hero/ — วางไฟล์ตามชื่อด้านล่าง ขนาดแนะนำ 1920×1080 -->
+    <div class="hero-slide is-active">
+      <img src="images/cover.jpg" alt="TNC รับผลิตเสื้อพิมพ์ลายทุกชนิด ขั้นต่ำ 10 ตัว ออกแบบฟรี จัดส่งทั่วประเทศ"
+           class="hero-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="img-placeholder ph-hero" style="display:none"><span>บันทึกรูป cover เป็น images/cover.jpg</span></div>
+    </div>
+    <div class="hero-slide">
+      <img src="images/hero/banner-2.jpg" alt="TNC แบนเนอร์ 2"
+           class="hero-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="img-placeholder ph-hero alt1" style="display:none"><span>วาง images/hero/banner-2.jpg — 1920×1080</span></div>
+    </div>
+    <div class="hero-slide">
+      <img src="images/hero/banner-3.jpg" alt="TNC แบนเนอร์ 3"
+           class="hero-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="img-placeholder ph-hero alt2" style="display:none"><span>วาง images/hero/banner-3.jpg — 1920×1080</span></div>
+    </div>
+    <div class="hero-cta">
+      <a href="https://line.me/R/ti/p/@tnc.th" target="_blank" rel="noopener" class="btn btn-lg">ปรึกษาฟรี</a>
+    </div>
+    <div class="hero-dots" id="heroDots"></div>
+  </div>
+</section>
+
+<!-- ===== Client Logos ===== -->
+<section class="clients">
+  <div class="container">
+    <p class="clients-title">ลูกค้าที่ไว้วางใจเรา</p>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track" id="marqueeTrack">
+      <!-- โฟลเดอร์ images/clients/ — วาง logo-1.png ถึง logo-12.png (พื้นหลังโปร่งใส ~200×100) -->
+      <div class="client-logo"><img src="images/clients/logo-1.png" alt="ลูกค้า 1" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">โลโก้ 1</span></div>
+      <div class="client-logo"><img src="images/clients/logo-2.png" alt="ลูกค้า 2" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">โลโก้ 2</span></div>
+      <div class="client-logo"><img src="images/clients/logo-3.png" alt="ลูกค้า 3" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">โลโก้ 3</span></div>
+      <div class="client-logo"><img src="images/clients/logo-4.png" alt="ลูกค้า 4" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">โลโก้ 4</span></div>
+      <div class="client-logo"><img src="images/clients/logo-5.png" alt="ลูกค้า 5" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">โลโก้ 5</span></div>
+      <div class="client-logo"><img src="images/clients/logo-6.png" alt="ลูกค้า 6" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">โลโก้ 6</span></div>
+      <div class="client-logo"><img src="images/clients/logo-7.png" alt="ลูกค้า 7" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">โลโก้ 7</span></div>
+      <div class="client-logo"><img src="images/clients/logo-8.png" alt="ลูกค้า 8" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">โลโก้ 8</span></div>
+      <div class="client-logo"><img src="images/clients/logo-9.png" alt="ลูกค้า 9" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">โลโก้ 9</span></div>
+      <div class="client-logo"><img src="images/clients/logo-10.png" alt="ลูกค้า 10" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">โลโก้ 10</span></div>
+      <div class="client-logo"><img src="images/clients/logo-11.png" alt="ลูกค้า 11" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">โลโก้ 11</span></div>
+      <div class="client-logo"><img src="images/clients/logo-12.png" alt="ลูกค้า 12" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">โลโก้ 12</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Why Us / จุดเด่น ===== -->
+<section class="features section" id="why-us">
+  <div class="container">
+    <h2 class="section-title reveal">ให้การสั่งเสื้อเป็นเรื่องง่าย <span class="accent-en">TNC</span> คือคำตอบ</h2>
+    <div class="stats-row">
+      <div class="stat-card reveal"><strong>1,000+</strong><span>องค์กรการันตี เลือกเราผลิตเสื้อ</span></div>
+      <div class="stat-card reveal"><strong>5,000</strong><span>รองรับการผลิต 5,000 ตัวต่อวัน</span></div>
+      <div class="stat-card reveal"><strong>7–10</strong><span>ผลิตไว เพียง 7–10 วันทำการ</span></div>
+      <div class="stat-card reveal"><strong>10+</strong><span>ผลิตขั้นต่ำ 10 ตัวขึ้นไป</span></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal"><div class="feature-icon">💬</div><h3>ตอบแชทไว ภายใน 5 นาที</h3></div>
+      <div class="feature-card reveal"><div class="feature-icon">📋</div><h3>แอดมินอัพเดตงาน ทุกขั้นตอน</h3></div>
+      <div class="feature-card reveal"><div class="feature-icon">🎨</div><h3>ออกแบบฟรี ปรับได้ไม่จำกัดครั้ง</h3></div>
+      <div class="feature-card reveal"><div class="feature-icon">🧊</div><h3>ฟรีแบบกราฟิก 3D</h3></div>
+      <div class="feature-card reveal"><div class="feature-icon">📏</div><h3>ทุกไซซ์ราคาเดียว ไม่มีบวกเพิ่ม</h3></div>
+      <div class="feature-card reveal"><div class="feature-icon">🧾</div><h3>ราคารวม VAT แล้ว</h3></div>
+      <div class="feature-card reveal"><div class="feature-icon">🧵</div><h3>ส่งตัวอย่างผ้าให้ดูฟรี</h3></div>
+      <div class="feature-card reveal"><div class="feature-icon">🚚</div><h3>จัดส่งฟรีทั่วประเทศ</h3></div>
+      <div class="feature-card reveal"><div class="feature-icon">✅</div><h3>สินค้ามีปัญหาเคลมฟรี ภายใน 7 วัน</h3></div>
+      <div class="feature-card reveal"><div class="feature-icon">🕘</div><h3>เปิดบริการทุกวัน 8.30–21.30 น.</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Services / บริการหลัก ===== -->
+<section class="services section section-alt" id="services">
+  <div class="container">
+    <h2 class="section-title reveal">บริการหลัก</h2>
+    <div class="cards-3">
+      <!-- โฟลเดอร์ images/services/ — print.jpg / polo.jpg / ready.jpg ขนาดแนะนำ 600×450 -->
+      <article class="service-card reveal">
+        <img src="images/services/print.jpg" alt="รับผลิตเสื้อพิมพ์ลาย" class="card-img ph-card" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-card" style="display:none"><span>วาง images/services/print.jpg — 600×450</span></div>
+        <div class="card-body">
+          <h3>รับผลิตเสื้อพิมพ์ลาย</h3>
+          <p>เสื้อพิมพ์ลายเต็มตัวด้วยระบบ Sublimation สีสด ไม่ลอก ไม่ซีด ออกแบบลายได้อิสระตามต้องการ</p>
+          <a href="#categories" class="btn btn-outline">ดูเพิ่มเติม</a>
+        </div>
+      </article>
+      <article class="service-card reveal">
+        <img src="images/services/polo.jpg" alt="เสื้อโปโลปัก" class="card-img ph-card alt1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-card alt1" style="display:none"><span>วาง images/services/polo.jpg — 600×450</span></div>
+        <div class="card-body">
+          <h3>เสื้อโปโลปัก</h3>
+          <p>เสื้อโปโลผ้าเกรดพรีเมี่ยม ปักโลโก้คมชัด เหมาะสำหรับยูนิฟอร์มบริษัทและหน่วยงาน</p>
+          <a href="#categories" class="btn btn-outline">ดูเพิ่มเติม</a>
+        </div>
+      </article>
+      <article class="service-card reveal">
+        <img src="images/services/ready.jpg" alt="เสื้อสำเร็จรูปขายปลีก" class="card-img ph-card alt2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-card alt2" style="display:none"><span>วาง images/services/ready.jpg — 600×450</span></div>
+        <div class="card-body">
+          <h3>เสื้อสำเร็จรูปขายปลีก</h3>
+          <p>เสื้อสำเร็จรูปพร้อมส่ง สั่งขั้นต่ำน้อย เลือกได้หลายแบบหลายสี เหมาะกับงานเร่งด่วน</p>
+          <a href="#categories" class="btn btn-outline">ดูเพิ่มเติม</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Categories / หมวดการใช้งาน ===== -->
+<section class="categories section" id="categories">
+  <div class="container">
+    <h2 class="section-title reveal">“ครบทุกแบบเสื้อ เหมาะกับทุกการใช้งาน”</h2>
+    <div class="cat-grid">
+      <!-- โฟลเดอร์ images/categories/ — ขนาดแนะนำ 500×620 (แนวตั้ง) -->
+      <a href="#footer" class="cat-card reveal">
+        <img src="images/categories/government.jpg" alt="เสื้อหน่วยงาน/รัฐวิสาหกิจ" class="card-img ph-cat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-cat" style="display:none"><span>วาง images/categories/government.jpg — 500×620</span></div>
+        <h3>เสื้อหน่วยงาน/รัฐวิสาหกิจ</h3>
+      </a>
+      <a href="#footer" class="cat-card reveal">
+        <img src="images/categories/shop.jpg" alt="เสื้อร้านค้า/บริษัท" class="card-img ph-cat alt1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-cat alt1" style="display:none"><span>วาง images/categories/shop.jpg — 500×620</span></div>
+        <h3>เสื้อร้านค้า/บริษัท</h3>
+      </a>
+      <a href="#footer" class="cat-card reveal">
+        <img src="images/categories/event.jpg" alt="เสื้อกิจกรรม/เสื้อทีม" class="card-img ph-cat alt2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-cat alt2" style="display:none"><span>วาง images/categories/event.jpg — 500×620</span></div>
+        <h3>เสื้อกิจกรรม/เสื้อทีม</h3>
+      </a>
+      <a href="#footer" class="cat-card reveal">
+        <img src="images/categories/school.jpg" alt="เสื้อโรงเรียน/กีฬาสี" class="card-img ph-cat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-cat" style="display:none"><span>วาง images/categories/school.jpg — 500×620</span></div>
+        <h3>เสื้อโรงเรียน/กีฬาสี</h3>
+      </a>
+      <a href="#footer" class="cat-card reveal">
+        <img src="images/categories/sport.jpg" alt="เสื้อกีฬา" class="card-img ph-cat alt1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-cat alt1" style="display:none"><span>วาง images/categories/sport.jpg — 500×620</span></div>
+        <h3>เสื้อกีฬา</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Reviews / รีวิวลูกค้า ===== -->
+<section class="reviews section section-alt" id="reviews">
+  <div class="container">
+    <h2 class="section-title reveal">รีวิวลูกค้า</h2>
+    <div class="review-grid">
+      <!-- โฟลเดอร์ images/reviews/ — review-1.jpg ถึง review-6.jpg ขนาดแนะนำ 600×400 -->
+      <figure class="review-card reveal">
+        <img src="images/reviews/review-1.jpg" alt="รีวิวจากบริษัทเอกชน" class="card-img ph-review" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-review" style="display:none"><span>วาง images/reviews/review-1.jpg — 600×400</span></div>
+        <figcaption><h3>บริษัทเอกชน</h3></figcaption>
+      </figure>
+      <figure class="review-card reveal">
+        <img src="images/reviews/review-2.jpg" alt="รีวิวจากหน่วยงานราชการ" class="card-img ph-review alt1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-review alt1" style="display:none"><span>วาง images/reviews/review-2.jpg — 600×400</span></div>
+        <figcaption><h3>หน่วยงานราชการ</h3></figcaption>
+      </figure>
+      <figure class="review-card reveal">
+        <img src="images/reviews/review-3.jpg" alt="รีวิวจากโรงเรียน/มหาวิทยาลัย" class="card-img ph-review alt2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-review alt2" style="display:none"><span>วาง images/reviews/review-3.jpg — 600×400</span></div>
+        <figcaption><h3>โรงเรียน/มหาวิทยาลัย</h3></figcaption>
+      </figure>
+      <figure class="review-card reveal">
+        <img src="images/reviews/review-4.jpg" alt="รีวิวจากรัฐวิสาหกิจ" class="card-img ph-review alt1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-review alt1" style="display:none"><span>วาง images/reviews/review-4.jpg — 600×400</span></div>
+        <figcaption><h3>รัฐวิสาหกิจ</h3></figcaption>
+      </figure>
+      <figure class="review-card reveal">
+        <img src="images/reviews/review-5.jpg" alt="รีวิวจากทีมกีฬา/กลุ่มกิจกรรม" class="card-img ph-review alt2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-review alt2" style="display:none"><span>วาง images/reviews/review-5.jpg — 600×400</span></div>
+        <figcaption><h3>ทีมกีฬา/กลุ่มกิจกรรม</h3></figcaption>
+      </figure>
+      <figure class="review-card reveal">
+        <img src="images/reviews/review-6.jpg" alt="รีวิวจากร้านค้า/แบรนด์สินค้า" class="card-img ph-review" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-review" style="display:none"><span>วาง images/reviews/review-6.jpg — 600×400</span></div>
+        <figcaption><h3>ร้านค้า/แบรนด์สินค้า</h3></figcaption>
+      </figure>
+    </div>
+    <div class="center"><a href="#footer" class="btn">ดูเพิ่มเติม</a></div>
+  </div>
+</section>
+
+<!-- ===== Order Steps / ขั้นตอนการสั่งซื้อ ===== -->
+<section class="steps section" id="steps">
+  <div class="container">
+    <h2 class="section-title reveal">ขั้นตอนการสั่งซื้อ</h2>
+    <ol class="steps-grid">
+      <li class="step-card reveal">
+        <span class="step-num">1</span>
+        <h3>มัดจำค่าออกแบบ 500.-</h3>
+        <p>เริ่มงานออกแบบทันที ปรับแบบได้ไม่จำกัดครั้ง (หักคืนจากยอดสั่งผลิต)</p>
+      </li>
+      <li class="step-card reveal">
+        <span class="step-num">2</span>
+        <h3>บอกสไตล์เสื้อ</h3>
+        <p>เลือกทรงเสื้อ เนื้อผ้า สี และส่งโลโก้/ธีมงานให้ทีมออกแบบ</p>
+      </li>
+      <li class="step-card reveal">
+        <span class="step-num">3</span>
+        <h3>ชำระเงินส่วนแรก 50%</h3>
+        <p>ยืนยันแบบและเริ่มการผลิต พร้อมอัพเดตสถานะให้ทุกขั้นตอน</p>
+      </li>
+      <li class="step-card reveal">
+        <span class="step-num">4</span>
+        <h3>ชำระเงินส่วนที่เหลือ</h3>
+        <p>ตรวจสอบสินค้าก่อนจัดส่ง ชำระยอดคงเหลือ แล้วรอรับสินค้าได้เลย</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Tools / โปรแกรมช่วยตัดสินใจ ===== -->
+<section class="tools section section-blue" id="tools">
+  <div class="container">
+    <h2 class="section-title light reveal">โปรแกรมช่วยตัดสินใจ</h2>
+    <div class="tools-grid">
+
+      <div class="tool-card reveal">
+        <h3>คำนวณราคาโดยประมาณ</h3>
+        <form id="priceForm">
+          <label>ประเภทเสื้อ
+            <select id="priceType">
+              <option value="print">เสื้อพิมพ์ลาย (Sublimation)</option>
+              <option value="polo">เสื้อโปโลปัก</option>
+              <option value="ready">เสื้อสำเร็จรูป + สกรีน</option>
+            </select>
+          </label>
+          <label>จำนวน (ตัว)
+            <input type="number" id="priceQty" min="1" value="50" required>
+          </label>
+          <button type="submit" class="btn">คำนวณ</button>
+        </form>
+        <div class="tool-result" id="priceResult" hidden></div>
+        <p class="tool-note">* ราคาประมาณการเบื้องต้น สอบถามราคาจริงกับแอดมิน</p>
+      </div>
+
+      <div class="tool-card reveal">
+        <h3>เครื่องช่วยเลือกไซซ์</h3>
+        <form id="sizeForm">
+          <label>น้ำหนัก (กก.)
+            <input type="number" id="sizeWeight" min="20" max="200" value="65" required>
+          </label>
+          <label>ส่วนสูง (ซม.)
+            <input type="number" id="sizeHeight" min="100" max="220" value="170" required>
+          </label>
+          <label>ทรงที่ชอบ
+            <select id="sizeFit">
+              <option value="fit">พอดีตัว</option>
+              <option value="loose">หลวมสบาย</option>
+            </select>
+          </label>
+          <button type="submit" class="btn">คำนวณ</button>
+        </form>
+        <div class="tool-result" id="sizeResult" hidden></div>
+        <p class="tool-note">* ไซซ์แนะนำเบื้องต้น เทียบกับตารางไซซ์จริงอีกครั้ง</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Blog / บทความ ===== -->
+<section class="blog section" id="blog">
+  <div class="container">
+    <h2 class="section-title reveal">บทความ</h2>
+    <div class="cards-3">
+      <!-- โฟลเดอร์ images/blog/ — article-1.jpg ถึง article-3.jpg ขนาดแนะนำ 600×400 -->
+      <article class="blog-card reveal">
+        <img src="images/blog/article-1.jpg" alt="เลือกเนื้อผ้าเสื้อโปโลอย่างไรให้เหมาะกับองค์กร" class="card-img ph-review" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-review" style="display:none"><span>วาง images/blog/article-1.jpg — 600×400</span></div>
+        <div class="card-body">
+          <h3>เลือกเนื้อผ้าเสื้อโปโลอย่างไรให้เหมาะกับองค์กร</h3>
+          <p>รู้จักผ้าจุติ ผ้า TC และผ้า TK ข้อดีข้อเสียของแต่ละแบบ ก่อนตัดสินใจสั่งผลิต...</p>
+          <a href="#blog" class="read-more">อ่านต่อ →</a>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <img src="images/blog/article-2.jpg" alt="เสื้อพิมพ์ลาย Sublimation ต่างจากสกรีนธรรมดาอย่างไร" class="card-img ph-review alt1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-review alt1" style="display:none"><span>วาง images/blog/article-2.jpg — 600×400</span></div>
+        <div class="card-body">
+          <h3>เสื้อพิมพ์ลาย Sublimation ต่างจากสกรีนธรรมดาอย่างไร</h3>
+          <p>เปรียบเทียบงานพิมพ์แต่ละระบบ ความคงทนของสี และงบประมาณที่เหมาะสม...</p>
+          <a href="#blog" class="read-more">อ่านต่อ →</a>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <img src="images/blog/article-3.jpg" alt="เตรียมไฟล์โลโก้อย่างไรให้งานปักออกมาคมชัด" class="card-img ph-review alt2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder ph-review alt2" style="display:none"><span>วาง images/blog/article-3.jpg — 600×400</span></div>
+        <div class="card-body">
+          <h3>เตรียมไฟล์โลโก้อย่างไรให้งานปักออกมาคมชัด</h3>
+          <p>ชนิดไฟล์ ขนาด และรายละเอียดที่ควรเตรียม เพื่อให้งานปักสวยตรงตามแบบ...</p>
+          <a href="#blog" class="read-more">อ่านต่อ →</a>
+        </div>
+      </article>
+    </div>
+    <div class="center"><a href="#blog" class="btn">บทความทั้งหมด</a></div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq section section-alt" id="faq">
+  <div class="container container-narrow">
+    <h2 class="section-title reveal">คำถามที่พบบ่อย</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="acc-item reveal">
+        <button class="acc-head" aria-expanded="false">สั่งขั้นต่ำกี่ตัว?<span class="acc-icon">+</span></button>
+        <div class="acc-body"><p>ผลิตขั้นต่ำเพียง 10 ตัวขึ้นไป ยิ่งจำนวนมากราคาต่อตัวยิ่งถูกลง รองรับการผลิตได้ถึง 5,000 ตัวต่อวัน</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <button class="acc-head" aria-expanded="false">ใช้เวลาผลิตนานแค่ไหน?<span class="acc-icon">+</span></button>
+        <div class="acc-body"><p>หลังยืนยันแบบและชำระเงินส่วนแรก ใช้เวลาผลิตเพียง 7–10 วันทำการ หากมีกำหนดงานเร่งด่วนแจ้งแอดมินเพื่อเช็คคิวก่อนได้</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <button class="acc-head" aria-expanded="false">ออกแบบให้ฟรีจริงไหม?<span class="acc-icon">+</span></button>
+        <div class="acc-body"><p>ฟรีจริง เพียงมัดจำค่าออกแบบ 500 บาท ซึ่งจะหักคืนเต็มจำนวนจากยอดสั่งผลิต ปรับแก้แบบได้ไม่จำกัดครั้งจนกว่าจะพอใจ พร้อมแบบกราฟิก 3D ให้ดูก่อนผลิต</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <button class="acc-head" aria-expanded="false">มีตัวอย่างผ้าให้ดูก่อนไหม?<span class="acc-icon">+</span></button>
+        <div class="acc-body"><p>มีบริการส่งตัวอย่างผ้าให้ดูฟรีถึงบ้าน เพื่อให้มั่นใจในเนื้อผ้าและสีก่อนตัดสินใจสั่งผลิตจริง</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <button class="acc-head" aria-expanded="false">ถ้าสินค้ามีปัญหาทำอย่างไร?<span class="acc-icon">+</span></button>
+        <div class="acc-body"><p>หากสินค้ามีตำหนิจากการผลิต แจ้งเคลมได้ฟรีภายใน 7 วันหลังได้รับสินค้า ทีมงานจะผลิตชดเชยหรือคืนเงินตามเงื่อนไข</p></div>
+      </div>
+    </div>
+    <div class="center"><a href="https://line.me/R/ti/p/@tnc.th" target="_blank" rel="noopener" class="btn">มีคำถามเพิ่มเติม?</a></div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer" id="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <p class="footer-logo">TNC <span>Thanuchaicharoen</span></p>
+      <p>บริษัท ธนูชัยเจริญ จำกัด<br>THANUCHAICHAROEN CO., LTD.</p>
+      <p>รับผลิตเสื้อพิมพ์ลายทุกชนิด เสื้อหน่วยงาน เสื้อองค์กร เสื้อกิจกรรม ขั้นต่ำ 10 ตัว ออกแบบฟรี จัดส่งทั่วประเทศ</p>
+      <p>9/81 หมู่ที่ 12 ซอย 8 ถนนราษฎร์คนึง ตำบลในเมือง อำเภอเมืองขอนแก่น จ.ขอนแก่น</p>
+    </div>
+    <div class="footer-col">
+      <h4>บริการของเรา</h4>
+      <ul>
+        <li><a href="#services">รับผลิตเสื้อพิมพ์ลาย</a></li>
+        <li><a href="#services">เสื้อโปโลปัก</a></li>
+        <li><a href="#services">เสื้อสำเร็จรูปขายปลีก</a></li>
+        <li><a href="#tools">โปรแกรมคำนวณราคา</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>เมนูลัด</h4>
+      <ul>
+        <li><a href="#why-us">ทำไมต้องเลือกเรา</a></li>
+        <li><a href="#reviews">รีวิวจากลูกค้า</a></li>
+        <li><a href="#faq">คำถามที่พบบ่อย</a></li>
+        <li><a href="#blog">บทความ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>ติดต่อเรา</h4>
+      <ul>
+        <li><a href="tel:0844003704">แอดมิน ตาล 084-400-3704</a></li>
+        <li><a href="tel:0819970896">แอดมิน วิน 081-997-0896</a></li>
+        <li><a href="https://line.me/R/ti/p/@tnc.th" target="_blank" rel="noopener">Line: @tnc.th</a></li>
+        <li><a href="https://m.me/112983417277912" target="_blank" rel="noopener">Facebook Messenger</a></li>
+        <li><a href="mailto:tncgarmaent.maketting@gmail.com">tncgarmaent.maketting@gmail.com</a></li>
+      </ul>
+      <p class="footer-hours">เปิดบริการทุกวัน 8.30–21.30 น.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 TNC Garment. All rights reserved.</p>
+      <p><a href="#footer">นโยบายความเป็นส่วนตัว</a> · <a href="#footer">เงื่อนไขการให้บริการ</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Floating contact buttons ===== -->
+<div class="float-contacts">
+  <a href="https://line.me/R/ti/p/@tnc.th" target="_blank" rel="noopener" class="float-btn float-line" aria-label="แชท Line">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11.1c0 4 3.5 7.3 8.3 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.6 8.2-6.1 1.5-1.7 2.2-3.4 2.2-5C22 6.6 17.5 3 12 3z"/></svg>
+  </a>
+  <a href="tel:0844003704" class="float-btn float-call" aria-label="โทรหาเรา">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+  </a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
